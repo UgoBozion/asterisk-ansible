@@ -1,10 +1,10 @@
 # Asterisk Ansible Playbook
 
-```
-# Cloner le dépôt
-git clone <URL_DU_REPO_GITHUB>
-cd <NOM_DU_REPO>
+1. Cloner le dépôt :
+   ```sh
+   git clone https://github.com/UgoBozion/asterisk-ansible
+   cd <asterisk-ansible>
 
-# Lancer le playbook
-ansible-playbook -i hosts playbook-asterisk.yml
-```
+1. Cloner le dépôt :
+   ```sh
+    ansible-playbook -i hosts playbook-asterisk.yml
