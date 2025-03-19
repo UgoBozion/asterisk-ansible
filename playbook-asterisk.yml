@@ -3,8 +3,8 @@
   hosts: all
   become: yes
   vars:
-    asterisk_version: "20.5.2"
-    asterisk_mirror: "https://github.com/asterisk/asterisk/archive/refs/tags/"
+    asterisk_version: "22.2.0"
+    asterisk_mirror: "https://codeload.github.com/asterisk/asterisk/tar.gz/refs/tags"
 
   tasks:
     - name: Mettre à jour et améliorer les paquets apt
@@ -38,7 +38,7 @@
 
     - name: Essayer de télécharger Asterisk depuis le miroir GitHub
       get_url:
-        url: "{{ asterisk_mirror }}{{ asterisk_version }}.tar.gz"
+        url: "{{ asterisk_mirror }}{{ asterisk_version }}"
         dest: "/usr/src/asterisk/asterisk-{{ asterisk_version }}.tar.gz"
       register: github_download
       ignore_errors: yes
